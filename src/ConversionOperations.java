@@ -3,7 +3,7 @@ import static java.lang.Math.abs;
 public class ConversionOperations {
     public static int conversionOperation(String number){
         int result;
-        switch (number)
+        switch (number) //todo для начала можно на HashMap переделать, будет аккуратнее смотреться и работать быстрее
         {
             case "minusten":
                 result = -10;
