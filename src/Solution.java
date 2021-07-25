@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Solution {
     private static String firstNumber;
-    private static String secondNumber;
+    private static String secondNumber;ббб
     private static String operation;
     private static String[] correctValues = {"minusone", "minustwo", "minusthree", "minusfour", "minusfive", "minussix",
             "minusseven", "minuseight", "minusnine", "minusten", "null", "one", "two", "three", "four", "five", "six",
