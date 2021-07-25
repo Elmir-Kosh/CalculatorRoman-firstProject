@@ -9,6 +9,7 @@ public class Solution {
     private static String firstNumber;
     private static String secondNumber;
     private static String operation;
+    //todo null зарезервированное слово в java, оно не равняется 0. Если имеешь в виду число, то лучше 'zero'
     private static String[] correctValues = {"minusone", "minustwo", "minusthree", "minusfour", "minusfive", "minussix",
             "minusseven", "minuseight", "minusnine", "minusten", "null", "one", "two", "three", "four", "five", "six",
             "seven", "eight", "nine", "ten"};
@@ -23,10 +24,10 @@ public class Solution {
             System.out.println("Введите прописью на английском языке первое число, от -10 до 10 (minusone, null, one...)");
             while (true) {
                 firstNumber = keyboard.next();
-                boolean b = Arrays.asList(correctValues).contains(firstNumber);
+                boolean b = Arrays.asList(correctValues).contains(firstNumber);//todo зачем нужен correctValues как массив, если пользуешься Array?
                 if (b == true) {
                     break;
-                } else System.out.println("Введите корректное значение");
+                } else System.out.println("Введите корректное значение"); //todo скобки тут хоть и не обязательны, лучше всегда пиши, вдруг потом логику добавишь, а скобку забудешь. Устанешь искать в чем ошибка, оно того не стоит)
             }
 
             System.out.println("Введите прописью на английском языке второе число, от -10 до 10 (minusone, null, one...)");
@@ -43,7 +44,7 @@ public class Solution {
 
             while (true) {
                 operation = keyboard.next();
-                if (operation.equalsIgnoreCase("/") && secondNumber.equalsIgnoreCase("null")) {
+                if (operation.equalsIgnoreCase("/") && secondNumber.equalsIgnoreCase("null")) {//todo какой смысл в ignoreCase со знаком '/'?)
                     System.out.println("Делить на ноль нельзя! Выберите другое действие!");
                     continue;
                 }
